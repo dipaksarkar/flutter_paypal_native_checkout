@@ -1,0 +1,44 @@
+import PayPalCheckout
+import Flutter
+
+class PayPalCallBackHelper {
+    public let channel: FlutterMethodChannel
+    public var autoCapture: Bool = true
+
+    init(flutterChannel: FlutterMethodChannel, autoCapture: Bool = true) {
+        channel = flutterChannel
+        self.autoCapture = autoCapture
+    }
+
+    public func onApprove(_ approval: Approval) throws {
+        if autoCapture {
+            approval.actions.capture { (response, error) in
+                print("Order successfully captured: \(response?.data)")
+            }
+        }
+        let data = approval.data
+        var dataMap: [String: Any?] = data.toDictionary()
+
+        let dataJson = try JSONSerialization.data(withJSONObject: dataMap, options: [])
+        let jsonString = String(data: dataJson, encoding: .utf8)!
+        let finalResult = ["approvalData": jsonString]
+        channel.invokeMethod("FlutterPaypal#onSuccess", arguments: finalResult)
+    }
+
+    public func onShippingChange(_ shippingChange: ShippingChange) throws {
+        let dataMap: [String: Any?] = shippingChange.toDictionary()
+        let dataJson = try JSONSerialization.data(withJSONObject: dataMap, options: [])
+        let jsonString = String(data: dataJson, encoding: .utf8)!
+        let finalResult = ["result": jsonString]
+        channel.invokeMethod(" FlutterPaypal#onShippingChange", arguments: finalResult)
+    }
+
+    public func onCancel() {
+        channel.invokeMethod("FlutterPaypal#onCancel", arguments: nil)
+    }
+
+    public func onError(_ error: ErrorInfo) {
+        channel.invokeMethod("FlutterPaypal#onError", arguments: error.toDictionary())
+    }
+}
+
