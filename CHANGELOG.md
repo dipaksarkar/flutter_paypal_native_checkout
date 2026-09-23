@@ -1,3 +1,6 @@
+## 1.0.1
+* Fixed Android build failure with AGP 8+ by removing `package` attribute from `AndroidManifest.xml` and declaring `namespace` in `build.gradle`.
+
 ## 1.0.0
 * Initial release of `flutter_paypal_native_checkout`.
 * Added `autoCapture` configuration flag to support secure server-side capture (`POST /v2/checkout/orders/{id}/capture`).
