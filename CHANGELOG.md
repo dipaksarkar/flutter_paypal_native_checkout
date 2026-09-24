@@ -1,3 +1,8 @@
+## 2.0.1
+
+- Updated package repository and homepage links to `dipaksarkar/flutter_paypal_native_checkout`.
+- Cleaned up build artifacts and package archive size for pub.dev distribution.
+
 ## 2.0.0
 
 - Full rebranding and refactor: Renamed all classes, method channels, Android package namespace (`com.nitrofit28.flutter_paypal_native_checkout`), and iOS plugin identifiers to `flutter_paypal_native_checkout` / `FlutterPaypalNativeCheckout`.

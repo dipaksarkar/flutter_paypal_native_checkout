@@ -1,6 +1,6 @@
 name: flutter_paypal_native_checkout
 description: A Flutter plugin for native PayPal Checkout supporting both client-side and server-side capture workflows.
-version: 2.0.0
+version: 2.0.1
 homepage: https://github.com/dipaksarkar/flutter_paypal_native_checkout
 repository: https://github.com/dipaksarkar/flutter_paypal_native_checkout
 issue_tracker: https://github.com/dipaksarkar/flutter_paypal_native_checkout/issues
