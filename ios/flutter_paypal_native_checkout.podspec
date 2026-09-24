@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 A Flutter plugin for native PayPal Checkout supporting both client-side and server-side capture workflows.
                        DESC
-  s.homepage         = 'https://github.com/nitrofit28/flutter_paypal_native_checkout'
+  s.homepage         = 'https://github.com/dipaksarkar/flutter_paypal_native_checkout'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'NitroFit28' => 'support@nitrofit28.com' }
+  s.author           = { 'Dipak' => 'dipak@coderstm.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
