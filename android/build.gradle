@@ -1,4 +1,4 @@
-group 'com.piccmaq.flutter_paypal_native'
+group 'com.nitrofit28.flutter_paypal_native_checkout'
 version '1.0'
 
 buildscript {
@@ -32,7 +32,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    namespace 'com.piccmaq.flutter_paypal_native'
+    namespace 'com.nitrofit28.flutter_paypal_native_checkout'
     compileSdkVersion 34
 
     compileOptions {

@@ -1,6 +1,6 @@
 name: flutter_paypal_native_checkout
 description: A Flutter plugin for native PayPal Checkout supporting both client-side and server-side capture workflows.
-version: 1.0.1
+version: 2.0.0
 homepage: https://github.com/nitrofit28/flutter_paypal_native_checkout
 repository: https://github.com/nitrofit28/flutter_paypal_native_checkout
 issue_tracker: https://github.com/nitrofit28/flutter_paypal_native_checkout/issues
@@ -37,10 +37,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.piccmaq.flutter_paypal_native
-        pluginClass: FlutterPaypalNativePlugin
+        package: com.nitrofit28.flutter_paypal_native_checkout
+        pluginClass: FlutterPaypalNativeCheckoutPlugin
       ios:
-        pluginClass: FlutterPaypalNativePlugin
+        pluginClass: FlutterPaypalNativeCheckoutPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

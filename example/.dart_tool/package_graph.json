@@ -48,7 +48,7 @@
     },
     {
       "name": "flutter_paypal_native_checkout",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "dependencies": [
         "flutter",
         "plugin_platform_interface"

@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_paypal_native_checkout/flutter_paypal_native.dart';
+import 'package:flutter_paypal_native_checkout/flutter_paypal_native_checkout.dart';
 import 'package:flutter_paypal_native_checkout/models/custom/currency_code.dart';
 import 'package:flutter_paypal_native_checkout/models/custom/environment.dart';
 import 'package:flutter_paypal_native_checkout/str_helper.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _flutterPaypalNativePlugin = FlutterPaypalNative.instance;
+  final _flutterPaypalNativePlugin = FlutterPaypalNativeCheckout.instance;
   // log queue
   List<String> logQueue = [];
 
@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
 
   void initPayPal() async {
     //set debugMode for error logging
-    FlutterPaypalNative.isDebugMode = true;
+    FlutterPaypalNativeCheckout.isDebugMode = true;
 
     //initiate payPal plugin
     await _flutterPaypalNativePlugin.init(

@@ -16,9 +16,9 @@ public final class GeneratedPluginRegistrant {
   private static final String TAG = "GeneratedPluginRegistrant";
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
     try {
-      flutterEngine.getPlugins().add(new com.piccmaq.flutter_paypal_native.FlutterPaypalNativePlugin());
+      flutterEngine.getPlugins().add(new com.nitrofit28.flutter_paypal_native_checkout.FlutterPaypalNativeCheckoutPlugin());
     } catch (Exception e) {
-      Log.e(TAG, "Error registering plugin flutter_paypal_native_checkout, com.piccmaq.flutter_paypal_native.FlutterPaypalNativePlugin", e);
+      Log.e(TAG, "Error registering plugin flutter_paypal_native_checkout, com.nitrofit28.flutter_paypal_native_checkout.FlutterPaypalNativeCheckoutPlugin", e);
     }
   }
 }
